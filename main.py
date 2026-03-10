@@ -142,6 +142,7 @@ class BacktestRunRequest(BaseModel):
     mark_ceiling_enabled: bool = False
     mark_floor_enabled: bool = False
     mark_uplift_enabled: bool = False
+    mark_uplift_stake: float = 3.0
     market_ids: list[str] = []  # empty = run all markets for the date
 
 
@@ -222,6 +223,7 @@ def backtest_run(req: BacktestRunRequest):
             mark_ceiling_enabled=req.mark_ceiling_enabled,
             mark_floor_enabled=req.mark_floor_enabled,
             mark_uplift_enabled=req.mark_uplift_enabled,
+            mark_uplift_stake=req.mark_uplift_stake,
         )
 
         if rule_result.skipped:

@@ -37,7 +37,7 @@ FRONTEND_URL = os.environ.get("FRONTEND_URL", "*")
 
 # ── FastAPI app ──
 
-app = FastAPI(title="FSU3 — CHIMERA Backtest Service", version="1.0.0")
+app = FastAPI(title="FSU3 — CHIMERA Backtest Service", version="5.0.0")
 
 app.add_middleware(
     CORSMiddleware,

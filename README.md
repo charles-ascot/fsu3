@@ -99,3 +99,13 @@ Response includes per-market results with favourite, rule applied, instructions 
 gcloud run deploy fsu3 --source . --region=europe-west2 --project=chimera-v4 \
   --set-env-vars "FSU_URL=https://fsu1-950990732577.europe-west1.run.app"
 ```
+
+
+## Changelog
+
+### 2026-03-30 — Domain migration prep
+- Replaced hardcoded `thync.online` domain references with environment variables
+- `ALLOWED_ORIGINS` env var (Cloud Run) now controls CORS allowed origins — set as comma-separated list, e.g. `https://service.newdomain.com,https://service.newdomain.com`
+- Default falls back to `http://localhost:5173` for local development
+- `FSU_URL` env var added — set to the FSU service Cloud Run URL
+- See `domain-migration-register.md` at the root of /Users/charles/Projects for the complete list of Cloud Run env vars to set per service

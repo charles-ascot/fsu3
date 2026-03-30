@@ -32,7 +32,7 @@ logger = logging.getLogger("fsu3")
 
 # ── Configuration ──
 
-FSU_URL = os.environ.get("FSU_URL", "https://fsu.thync.online")
+FSU_URL = os.environ.get("FSU_URL", "")
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "*")
 
 # ── FastAPI app ──

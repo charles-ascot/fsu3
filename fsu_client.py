@@ -29,7 +29,7 @@ from rules import Runner
 
 logger = logging.getLogger("fsu_client")
 
-FSU_BASE_URL = os.getenv("FSU_URL", "https://fsu.thync.online")
+FSU_BASE_URL = os.getenv("FSU_URL", "")
 
 
 class FSUClient:
